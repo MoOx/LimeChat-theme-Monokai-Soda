@@ -1,0 +1,268 @@
+* { box-sizing: border-box; }
+
+html {
+    margin: 0;
+    padding: 0;
+    
+    font: 12px/1.3rem Menlo, Monaco, "Courier New", monospace;
+    color: #eee;
+    text-shadow: 0 1px 0 #000;
+    background-color: #222;
+}
+
+a img {
+    border: 0;
+}
+
+img {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    max-width: 95%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #184586;
+}
+
+hr {
+    margin: 0;
+    padding: 2px;
+    height: 2px;
+    border: none;
+    background-color: rgba(0,0,0, .6);
+    text-align: center;
+}
+
+body.console {}
+
+body[type=channel] {}
+
+body[type=talk] {}
+
+body[type=console] {}
+
+/* lines */
+.line {
+    margin: 0;
+    padding: 0 .4rem;
+    /*background-color: #eee;*/
+    line-height: 1.8;
+}
+
+    /* body of the message */
+    .line .message {
+        display: block;
+        padding: 0 .4rem;
+        margin-left: 10rem;
+        /*border-left: 1px solid #dcdcdc;*/
+        /*color: #303030;*/
+        /*background-color: #6f705e;*/
+    }
+
+    /*.line .place {
+        display: block;
+        color: #999;
+        margin: 0;
+        font-size: 10rem;
+    }*/
+
+    /* message to me */
+    .line[highlight=true] span.message {
+        
+    }
+
+    /* alternate lines */
+    .line[alternate=even] {}
+    .line[alternate=odd] {}
+
+
+    .line[type=action] .sender:before {
+        content: "";
+    }
+
+    .line[type=action] .sender {
+        font-style: italic;
+    }
+
+    /* action message */
+    .line[type=action] .message {
+        /*background: #eee;*/
+        /*border-left: none;*/
+        /*margin: 0 0 0 10rem;*/
+    }
+
+/* nickname for text messages */
+.sender {
+    float: left;
+    width: 10rem;
+    padding: 0 .4rem;
+    
+    text-align: right;
+    font-weight: bold;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+    .sender[type=myself] {
+        color: #f12770;
+    }
+    .sender[type=normal] {
+        color: #a6e22d;
+    }
+
+    .sender[type=normal][colornumber='0'] { color: #a6e22d; }
+    .sender[type=normal][colornumber='1'] { color: #76d9e6; }
+    .sender[type=normal][colornumber='2'] { color: #e6d06c; }
+    
+    .sender[type=normal][colornumber='3'] { color: #a6e22d; }
+    .sender[type=normal][colornumber='4'] { color: #76d9e6; }
+    .sender[type=normal][colornumber='5'] { color: #e6d06c; }
+    
+    .sender[type=normal][colornumber='6'] { color: #a6e22d; }
+    .sender[type=normal][colornumber='7'] { color: #76d9e6; }
+    .sender[type=normal][colornumber='8'] { color: #e6d06c; }
+    
+    .sender[type=normal][colornumber='9'] { color: #a6e22d; }
+    .sender[type=normal][colornumber='10'] { color: #76d9e6; }
+    .sender[type=normal][colornumber='11'] { color: #e6d06c; }
+    
+    .sender[type=normal][colornumber='12'] { color: #a6e22d; }
+    .sender[type=normal][colornumber='13'] { color: #76d9e6; }
+    .sender[type=normal][colornumber='14'] { color: #e6d06c; }
+    
+    .sender[type=normal][colornumber='15'] { color: #a6e22d; }
+    .sender[type=normal][colornumber='16'] { color: #76d9e6; }
+    .sender[type=normal][colornumber='17'] { color: #e6d06c; }
+    
+    .sender[type=normal][colornumber='18'] { color: #a6e22d; }
+    .sender[type=normal][colornumber='19'] { color: #76d9e6; }
+    .sender[type=normal][colornumber='20'] { color: #e6d06c; }
+
+    /* hide sender when it's not his first message */
+    .sender[first=false] {
+        margin-right: 0;
+        
+        color: rgba(0,0,0,0) !important;
+        text-shadow: none;
+    }
+    
+    /* & just add a quote */
+    .sender[first=false]:after {
+        content:"»";
+        color: #2f3030;
+        text-shadow: 0 1px 0 #000;
+    }
+
+    .sender[type=myself]:after { content: " ★"; }
+
+    [type=myself],
+    .sender[type=myself] + .message {
+        color: #6f705e;
+        /*background-color: #f5f5f5;*/
+    }
+
+/* Event */
+.event {
+    font-size: .8rem;
+    margin: .4rem .2rem .4rem 10.2rem;
+    padding: 0 .2rem;
+    /*background: ;*/
+    
+    /*border-top: 1px solid rgba(255, 255, 255, .05);
+    border-bottom: 1px solid rgba(255, 255, 255, .05);*/
+}
+
+    /* border between events */
+    /*.event + .event {
+        border-top: 0;
+    }*/
+
+    .event .message {
+        margin: 0;
+        padding: 0 .4rem;
+        border: 0;
+        
+        color: #6f705e;
+        background: none;
+        /*font: bold 11px "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+        opacity: .4;
+    }
+    
+        .event:hover .message { opacity: 1; }
+
+/* member */
+.member {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+    .member:hover {
+        text-decoration: underline;
+    }
+
+/* message body */
+.message[type=system] { color: #303030; }
+.message[type=error] {
+    color: #d14025;
+    font-weight: bold;
+}
+    /*.message[type=reply] { color: #a6b9c0; }
+    .message[type=error_reply] { color: #d33b54; }
+    .message[type=dcc_send_send] { color: #a6b9c0; }
+    .message[type=dcc_send_receive] { color: #153b7c; }
+    .message[type=privmsg] { }
+    .message[type=notice] { color: #888; }
+    .message[type=action] {
+        color: #303030;
+        font-style: italic;
+        font-weight: bold;
+    }
+    .message[type=join] { color: #a6b9c0; }
+    .message[type=part] { color: #a6b9c0; }
+    .message[type=kick] { color: #303030; }
+    .message[type=quit] { color: #a6b9c0; }
+    .message[type=kill] { color: #a6b9c0; }
+    .message[type=nick] { color: #a6b9c0; }
+    .message[type=mode] { color: #a6b9c0; }
+    .message[type=topic] { color: #a6b9c0; }
+    .message[type=invite] { color: #a6b9c0; }
+    .message[type=wallops] { color: #a6b9c0; }
+    .message[type=debug_send] { color: #aaa; }
+    .message[type=debug_receive] { color: #444; }*/
+
+/* other types */
+.url {
+    word-break: break-all;
+    
+    color: #a77afe !important;
+}
+
+.address {
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+/* myself in message */
+.highlight {
+    color: #f12770;
+    font-weight: bold;
+}
+
+.time {
+    float: right;
+    padding: 0 .4rem;
+    
+    font-size: .8rem;
+    
+    color: #6f705e;
+    opacity: .4;
+}
+
+    *:hover > .time { opacity: 1; }
