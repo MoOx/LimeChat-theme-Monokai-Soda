@@ -6,13 +6,13 @@ log-view:
     scroller-highlight-color: '#f12770'
 
 input-text:
-    font-family: 'Menlo'
+    font-family: 'Source Code Pro'
     font-size: 10px
     color: '#fff'
     background-color: '#222'
 
 member-list:
-    font-family: 'Menlo'
+    font-family: 'Source Code Pro'
     font-size: 10px
     color: '#444'
     background-color: '#222'
@@ -28,7 +28,7 @@ member-list:
             bottom-line-color: '#2f3030'
 
 server-tree:
-    font-family: 'Menlo'
+    font-family: 'Source Code Pro'
     font-size: 10px
     background-color: '#222'
     highlight:
