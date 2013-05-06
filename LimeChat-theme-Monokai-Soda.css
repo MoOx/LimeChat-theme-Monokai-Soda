@@ -84,7 +84,7 @@ body[type=console] {}
 }
 
     /* body of the message */
-    .line .message {
+    .line[type=privmsg] .message {
         display: block;
         padding: 0 .4rem;
         margin-left: 8rem;
@@ -109,24 +109,22 @@ body[type=console] {}
     .line[alternate=even] {}
     .line[alternate=odd] {}
 
-
-    .line[type=action] .sender:before {
-        content: "";
-    }
-
-    .line[type=action] .sender {
-        font-style: italic;
-    }
-
     /* action message */
-    .line[type=action] .message {
-        /*background: #eee;*/
-        /*border-left: none;*/
-        /*margin: 0 0 0 8rem;*/
+    .line[type=action] {
+        margin: 0 0 0 -webkit-calc(8rem + .4rem);
     }
+    
+        .line[type=action] .message,
+        .line[type=action] .sender {
+            color: #6f705e !important;
+            opacity: .8;
+            font-weight: normal;
+        }
+
+        .line[type=action] .sender:before { content: ""; }
 
 /* nickname for text messages */
-.sender {
+.line[type=privmsg] .sender {
     float: left;
     width: 8rem;
     padding: 0 .4rem;
@@ -175,7 +173,7 @@ body[type=console] {}
     .sender[type=normal][colornumber='20'] { color: #e6d06c; }
 
     /* hide sender when it's not his first message */
-    .sender[first=false] {
+    [type=privmsg] .sender[first=false] {
         margin-right: 0;
         
         color: rgba(0,0,0,0) !important;
@@ -183,7 +181,7 @@ body[type=console] {}
     }
     
     /* & just add a quote */
-    .sender[first=false]:after {
+    [type=privmsg] .sender[first=false]:after {
         content:"»";
         color: #2f3030;
         text-shadow: 0 1px 0 #000;
