@@ -40,3 +40,6 @@ Save this log into a `debug.html` file an open it with a browser that has some d
 ## License
 
 Released under [MIT Licence](http://moox.mit-license.org/)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/MoOx/limechat-theme-monokai-soda/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
