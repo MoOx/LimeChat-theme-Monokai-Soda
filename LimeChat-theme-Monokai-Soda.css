@@ -187,13 +187,13 @@ body[type=console] {}
         text-shadow: 0 1px 0 #000;
     }
 
-    .sender[type=myself]:after { content: " ★"; }
 
     [type=myself],
     .sender[type=myself] + .message {
         color: #6f705e;
         /*background-color: #f5f5f5;*/
     }
+  [type=privmsg] [type=myself]:after { content: " ★"; }
 
 /* Event */
 .event {
