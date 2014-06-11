@@ -2,53 +2,53 @@
 # You cannot use color names.
 
 log-view:
-    nickname-format: '%n'
-    scroller-highlight-color: '#f12770'
+  nickname-format: '%n'
+  scroller-highlight-color: '#f12770'
 
 input-text:
-    font-family: 'Source Code Pro'
-    font-size: 10px
-    color: '#fff'
-    background-color: '#222'
+  font-family: 'Menlo'
+  font-size: 9px
+  color: '#fff'
+  background-color: '#222'
 
 member-list:
-    font-family: 'Source Code Pro'
-    font-size: 10px
-    color: '#444'
-    background-color: '#222'
+  font-family: 'Menlo'
+  font-size: 9px
+  color: '#444'
+  background-color: '#222'
 
-    operator:
-        color: '#bebec5'
-    selected:
-        color: '#fff'
-        background:
-            top-line-color: '#2f3030'
-            top-color: '#2f3030'
-            bottom-color: '#2f3030'
-            bottom-line-color: '#2f3030'
+  operator:
+    color: '#bebec5'
+  selected:
+    color: '#fff'
+    background:
+      top-line-color: '#2f3030'
+      top-color: '#2f3030'
+      bottom-color: '#2f3030'
+      bottom-line-color: '#2f3030'
 
 server-tree:
-    font-family: 'Source Code Pro'
-    font-size: 10px
-    background-color: '#222'
-    highlight:
-        color: '#a6e22d'
-    newtalk:
-        color: '#f12770'
-    unread:
-        color: '#a77afe'
-    normal:
-        active:
-            color: '#6f705e'
-        inactive:
-            color: '#2f3030'
-    selected:
-        active:
-            color: '#fff'
-        inactive:
-            color: '#eee'
-        background:
-            top-line-color: '#2f3030'
-            top-color: '#2f3030'
-            bottom-color: '#2f3030'
-            bottom-line-color: '#2f3030'
+  font-family: 'Menlo'
+  font-size: 9px
+  background-color: '#222'
+  highlight:
+    color: '#a6e22d'
+  newtalk:
+    color: '#f12770'
+  unread:
+    color: '#a77afe'
+  normal:
+    active:
+      color: '#6f705e'
+    inactive:
+      color: '#2f3030'
+  selected:
+    active:
+      color: '#fff'
+    inactive:
+      color: '#eee'
+    background:
+      top-line-color: '#2f3030'
+      top-color: '#2f3030'
+      bottom-color: '#2f3030'
+      bottom-line-color: '#2f3030'
