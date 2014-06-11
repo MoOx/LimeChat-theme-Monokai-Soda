@@ -293,3 +293,6 @@ body[type=console] {}
 }
 
     *:hover > .time { opacity: 1; }
+.place {
+  color: #6f705e;
+}
