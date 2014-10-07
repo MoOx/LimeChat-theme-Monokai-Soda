@@ -21,7 +21,7 @@ a[imageindex] {
   max-width: 95%;
 }
 
-  a[imageindex]:after {
+  a[imageindex]::after {
     content: "";
     position: absolute;
     display: block;
@@ -124,7 +124,7 @@ body[type=console] {}
       font-weight: normal;
     }
 
-    .line[type=action] .sender:before { content: ""; }
+    .line[type=action] .sender::before { content: ""; }
 
 /* nickname for text messages */
 .line[type=privmsg] .sender {
@@ -184,7 +184,7 @@ body[type=console] {}
   }
 
   /* & just add a quote */
-  [type=privmsg] .sender[first=false]:after {
+  [type=privmsg] .sender[first=false]::after {
     content:"»";
     color: #2f3030;
     text-shadow: 0 1px 0 #000;
@@ -194,7 +194,7 @@ body[type=console] {}
     margin-top: 10px;
   }
 
-  [type=privmsg] [type=myself]:after { content: " ★"; }
+  [type=privmsg] [type=myself]::after { content: " ★"; }
 
   [type=myself],
   .sender[type=myself] + .message {
