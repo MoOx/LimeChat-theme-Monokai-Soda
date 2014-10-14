@@ -90,10 +90,10 @@ body[type=console] {}
   .line[type=privmsg] .message {
     display: block;
     padding: 0 .4rem;
-    margin-left: 8rem;
     /*border-left: 1px solid #dcdcdc;*/
     /*color: #303030;*/
     /*background-color: #6f705e;*/
+    margin-left: 11rem;
   }
 
   /*.line .place {
@@ -114,7 +114,7 @@ body[type=console] {}
 
   /* action message */
   .line[type=action] {
-    margin: 0 0 0 -webkit-calc(8rem + .4rem);
+    margin: 0 0 0 -webkit-calc(11rem + .4rem);
   }
 
     .line[type=action] .message,
@@ -129,7 +129,7 @@ body[type=console] {}
 /* nickname for text messages */
 .line[type=privmsg] .sender {
   float: left;
-  width: 8rem;
+  width: 11rem;
   padding: 0 .4rem;
 
   text-align: right;
@@ -205,7 +205,7 @@ body[type=console] {}
 /* Event */
 .event {
   font-size: .8rem;
-  margin: .4rem .2rem .4rem -webkit-calc(8rem + .2rem);
+  margin: .4rem .2rem .4rem -webkit-calc(11rem + .2rem);
   padding: 0 .2rem;
   /*background: ;*/
 
